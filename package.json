@@ -1,0 +1,21 @@
+{
+  "name": "websocket_heroku_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "13.1.x"
+  },
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "express": "^4.17.1",
+    "utf-8-validate": "^5.0.2",
+    "ws": "^7.2.3"
+  }
+}
