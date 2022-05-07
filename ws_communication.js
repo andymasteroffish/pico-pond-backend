@@ -30,7 +30,7 @@ exports.got_connection = function (ws){
 		let msg = JSON.parse(msg_raw)
 
 		if (msg.type === 'input_change'){
-			console.log("new val: "+msg.val)
+			//console.log("new val: "+msg.val)
 			let frog = game.get_frog_from_ws(ws);
 			if (frog == null){
 				console.log("FROG NOT FOUND")
