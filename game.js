@@ -1,7 +1,7 @@
 const communication = require('./ws_communication.js')
 
 
-var frogs = new Array(2);
+var frogs = new Array(20);  //this number must match the frontend
 
 //these values should match pico8 vals
 var growth_rate = 1;
