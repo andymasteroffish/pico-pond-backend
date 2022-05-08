@@ -1,7 +1,7 @@
 const communication = require('./ws_communication.js')
 
 
-var frogs = new Array(20);
+var frogs = new Array(2);
 
 //these values should match pico8 vals
 var growth_rate = 1;
@@ -32,7 +32,6 @@ exports.join_player = function(ws){
   //find an open frog
   let open_frogs = []
   for (let i=0; i<frogs.length; i++){
-    console.log("check frog "+i)
     if (!frogs[i].active){
       //my_frog = frogs[i]
       open_frogs.push(i)

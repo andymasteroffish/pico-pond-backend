@@ -22,6 +22,9 @@ exports.got_connection = function (ws){
 	//TODO: tell them pond was full if there was no available frog
 	else{
 		console.log("NO SPACE FOR THIS PLAYER")
+		ws.send( JSON.stringify({
+			type : "pond_full"
+		}))
 	}
 
 	//recieving info
