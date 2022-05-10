@@ -5,7 +5,6 @@ var frogs = new Array(20);  //this number must match the frontend
 
 //these values should match pico8 vals
 var growth_rate = 1;
-
 var max_frog_value = 100;
 
 exports.setup = function(){
@@ -33,7 +32,6 @@ exports.join_player = function(ws){
   let open_frogs = []
   for (let i=0; i<frogs.length; i++){
     if (!frogs[i].active){
-      //my_frog = frogs[i]
       open_frogs.push(i)
     }
   }
@@ -65,12 +63,6 @@ exports.remove_player = function(ws){
 }
 
 exports.tick = function(){
-  // frogs.forEach( frog => {
-  //   if (frog.active){
-  //     frog.val -= decay_rate
-  //     if (frog.val < 0) frog.val = 0
-  //   }
-  // })
   for (let i=0; i<frogs.length; i++){
     let frog = frogs[i]
     if (frog.active){
@@ -79,8 +71,6 @@ exports.tick = function(){
       else                  frog.val = 0
 
       if (frog.val > max_frog_value) frog.val = max_frog_value
-
-      //console.log(i+": "+frog.button_down + " / "+frog.val)
     }
   }
 
@@ -94,6 +84,5 @@ exports.get_frog_from_ws = function(ws){
       return frogs[i];
     }
   }
-
   return null;
 }

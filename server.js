@@ -19,6 +19,7 @@ const server = express()
 
 const wss = new Server({ server });
 
+//starts te game
 function setup() {
   game.setup();
 
@@ -29,6 +30,7 @@ function setup() {
 
 }
 
+//I thought more would be hapenning here lol
 function tick() {
   game.tick();
 }
@@ -38,10 +40,6 @@ wss.on("connection", ws => {
   communication.got_connection(ws);
 });
 
+//call the setup function and kick things off
 setup();
 
-//***************
-//Gameplay
-//***************
-
-//reset
